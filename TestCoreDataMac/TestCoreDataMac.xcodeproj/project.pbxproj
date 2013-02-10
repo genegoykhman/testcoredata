@@ -31,6 +31,7 @@
 		B0FB514916C76C59004F11E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B0FB514C16C76C59004F11E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B0FB51C016C76EE9004F11E1 /* libTestCoreDataSharedMac.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTestCoreDataSharedMac.a; path = ../TestCoreDataShared/build/Release/libTestCoreDataSharedMac.a; sourceTree = "<group>"; };
+		B0FB51C516C77410004F11E1 /* TestCoreDataMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestCoreDataMac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 		B0FB513C16C76C59004F11E1 /* TestCoreDataMac */ = {
 			isa = PBXGroup;
 			children = (
+				B0FB51C516C77410004F11E1 /* TestCoreDataMac.entitlements */,
 				B0FB514816C76C59004F11E1 /* AppDelegate.h */,
 				B0FB514916C76C59004F11E1 /* AppDelegate.m */,
 				B0FB514B16C76C59004F11E1 /* MainMenu.xib */,
@@ -267,6 +269,8 @@
 		B0FB515416C76C5A004F11E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestCoreDataMac/TestCoreDataMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataMac/TestCoreDataMac-Prefix.pch";
@@ -279,6 +283,8 @@
 		B0FB515516C76C5A004F11E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestCoreDataMac/TestCoreDataMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataMac/TestCoreDataMac-Prefix.pch";

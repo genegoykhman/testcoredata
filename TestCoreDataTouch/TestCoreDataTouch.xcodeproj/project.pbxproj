@@ -39,6 +39,7 @@
 		B0FB517B16C76C8F004F11E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B0FB517E16C76C8F004F11E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B0FB51C216C76EF9004F11E1 /* libTestCoreDataShared.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTestCoreDataShared.a; path = "../TestCoreDataShared/build/Release-iphoneos/libTestCoreDataShared.a"; sourceTree = "<group>"; };
+		B0FB51C416C773EA004F11E1 /* TestCoreDataTouch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestCoreDataTouch.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		B0FB516816C76C8E004F11E1 /* TestCoreDataTouch */ = {
 			isa = PBXGroup;
 			children = (
+				B0FB51C416C773EA004F11E1 /* TestCoreDataTouch.entitlements */,
 				B0FB517116C76C8E004F11E1 /* AppDelegate.h */,
 				B0FB517216C76C8E004F11E1 /* AppDelegate.m */,
 				B0FB517A16C76C8F004F11E1 /* ViewController.h */,
@@ -264,6 +266,7 @@
 		B0FB518316C76C8F004F11E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestCoreDataTouch/TestCoreDataTouch.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataTouch/TestCoreDataTouch-Prefix.pch";
 				INFOPLIST_FILE = "TestCoreDataTouch/TestCoreDataTouch-Info.plist";
@@ -275,6 +278,7 @@
 		B0FB518416C76C8F004F11E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestCoreDataTouch/TestCoreDataTouch.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataTouch/TestCoreDataTouch-Prefix.pch";
 				INFOPLIST_FILE = "TestCoreDataTouch/TestCoreDataTouch-Info.plist";
