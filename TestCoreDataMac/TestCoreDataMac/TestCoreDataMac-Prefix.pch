@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TestCoreDataMac' target in the 'TestCoreDataMac' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
