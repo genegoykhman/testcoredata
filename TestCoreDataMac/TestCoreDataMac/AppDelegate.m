@@ -17,6 +17,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	// Insert code here to initialize your application
+	[self report:@"Welcome to TestCoreDataMac"];
+}
+
+- (void)report:(NSString *)info
+{
+	NSTextStorage *storage = [_textView textStorage];
+	[_textView setString:[NSString stringWithFormat:@"%@\n%@", [storage string], info]];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.indigo1.TestCoreDataMac" in the user's Application Support directory.
