@@ -19,6 +19,7 @@
 	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	[self report:@"Welcome to TestCoreDataTouch"];
     return YES;
 }
 
@@ -47,6 +48,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)report:(NSString *)info
+{
+	[_viewController report:info];
 }
 
 @end

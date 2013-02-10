@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) ViewController *viewController;
 
+- (void)report:(NSString *)info;
+
 @end

@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (assign) IBOutlet UITextView *textView;
+
+- (void)report:(NSString *)info;
+
 @end

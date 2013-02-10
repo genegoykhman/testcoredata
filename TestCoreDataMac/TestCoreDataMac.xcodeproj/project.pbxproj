@@ -14,6 +14,7 @@
 		B0FB514A16C76C59004F11E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB514916C76C59004F11E1 /* AppDelegate.m */; };
 		B0FB514D16C76C59004F11E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0FB514B16C76C59004F11E1 /* MainMenu.xib */; };
 		B0FB51C116C76EE9004F11E1 /* libTestCoreDataSharedMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB51C016C76EE9004F11E1 /* libTestCoreDataSharedMac.a */; };
+		B0FB51C816C77521004F11E1 /* SimpleModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B0FB51C716C77521004F11E1 /* SimpleModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		B0FB514816C76C59004F11E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0FB514916C76C59004F11E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B0FB514C16C76C59004F11E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B0FB51C016C76EE9004F11E1 /* libTestCoreDataSharedMac.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTestCoreDataSharedMac.a; path = ../TestCoreDataShared/build/Release/libTestCoreDataSharedMac.a; sourceTree = "<group>"; };
+		B0FB51C016C76EE9004F11E1 /* libTestCoreDataSharedMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestCoreDataSharedMac.a; path = ../TestCoreDataShared/build/Release/libTestCoreDataSharedMac.a; sourceTree = "<group>"; };
 		B0FB51C516C77410004F11E1 /* TestCoreDataMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestCoreDataMac.entitlements; sourceTree = "<group>"; };
+		B0FB51C616C77521004F11E1 /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B0FB51C516C77410004F11E1 /* TestCoreDataMac.entitlements */,
+				B0FB51C716C77521004F11E1 /* SimpleModel.xcdatamodeld */,
 				B0FB514816C76C59004F11E1 /* AppDelegate.h */,
 				B0FB514916C76C59004F11E1 /* AppDelegate.m */,
 				B0FB514B16C76C59004F11E1 /* MainMenu.xib */,
@@ -162,6 +165,7 @@
 				B0FB514116C76C59004F11E1 /* InfoPlist.strings in Resources */,
 				B0FB514716C76C59004F11E1 /* Credits.rtf in Resources */,
 				B0FB514D16C76C59004F11E1 /* MainMenu.xib in Resources */,
+				B0FB51C816C77521004F11E1 /* SimpleModel.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TestCoreDataMac/TestCoreDataMac.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer: Gene Goykhman (988AXS96ZW)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataMac/TestCoreDataMac-Prefix.pch";
 				INFOPLIST_FILE = "TestCoreDataMac/TestCoreDataMac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "53A55274-FC3F-4EE4-9562-0F4DB56A1EDC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -284,12 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TestCoreDataMac/TestCoreDataMac.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer: Gene Goykhman (988AXS96ZW)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCoreDataMac/TestCoreDataMac-Prefix.pch";
 				INFOPLIST_FILE = "TestCoreDataMac/TestCoreDataMac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "53A55274-FC3F-4EE4-9562-0F4DB56A1EDC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -313,8 +319,22 @@
 				B0FB515516C76C5A004F11E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0FB51C716C77521004F11E1 /* SimpleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0FB51C616C77521004F11E1 /* SimpleModel.xcdatamodel */,
+			);
+			currentVersion = B0FB51C616C77521004F11E1 /* SimpleModel.xcdatamodel */;
+			name = SimpleModel.xcdatamodeld;
+			path = ../../TestCoreDataShared/TestCoreDataShared/SimpleModel.xcdatamodeld;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B0FB512B16C76C59004F11E1 /* Project object */;
 }

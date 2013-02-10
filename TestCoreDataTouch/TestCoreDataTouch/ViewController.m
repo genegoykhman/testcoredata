@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)report:(NSString *)info
+{
+	[_textView setText:[NSString stringWithFormat:@"%@\n%@", [_textView text], info]];
+}
+
 @end
