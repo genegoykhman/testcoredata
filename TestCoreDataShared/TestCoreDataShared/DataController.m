@@ -7,6 +7,7 @@
 //
 
 #import "DataController.h"
+#import "SimpleEntity.h"
 
 NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 
@@ -110,7 +111,9 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 
 - (void)mergeiCloudChangeNotification:(NSNotification *)note
 {
+	[self report:@"Received update from iCloud"];
 	[_mainThreadContext mergeChangesFromContextDidSaveNotification:note];
+	[_delegate performSelector:@selector(refreshEntityCount:)];
 }
 
 - (void)nukeAndPave {
@@ -202,6 +205,60 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 
 - (NSString *)applicationDocumentsDirectory {
 	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+}
+
+- (void)insertSimpleEntity
+{
+	NSManagedObject *newEntity = [NSEntityDescription insertNewObjectForEntityForName:@"SimpleEntity"
+																				  inManagedObjectContext:_mainThreadContext];
+	SimpleEntity *entity = (SimpleEntity *)newEntity;
+	[entity setSimpleAttribute:@"Simple String"];
+	
+	// Save the context
+	
+	NSError *error = nil;
+	if (![_mainThreadContext save:&error])
+		[self report:[NSString stringWithFormat:@"Could not save entity: %@", error]];
+	else {
+		[self report:[NSString stringWithFormat:@"Entity successfully added"]];
+		[_delegate performSelector:@selector(refreshEntityCount:)];
+	}
+}
+
+- (void)deleteAllEntities
+{
+	NSError *error = nil;
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:[NSEntityDescription entityForName:@"SimpleEntity" inManagedObjectContext:_mainThreadContext]];
+	[request setIncludesSubentities:NO];
+	NSArray *results  = [_mainThreadContext executeFetchRequest:request error:&error];
+	if (!results) {
+		[self report:[NSString stringWithFormat:@"Could not fetch list of entities %@", error]];
+		return;
+	}
+	for (NSManagedObject *obj in results) {
+		[_mainThreadContext deleteObject:obj];
+	}
+	
+	// Save
+	
+	if (![_mainThreadContext save:&error])
+		[self report:[NSString stringWithFormat:@"Could not delete entities %@", error]];
+	[_delegate performSelector:@selector(refreshEntityCount:)];
+}
+
+- (NSUInteger)countEntities
+{
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:[NSEntityDescription entityForName:@"SimpleEntity" inManagedObjectContext:_mainThreadContext]];
+	[request setIncludesSubentities:NO];
+	
+	NSError *error = nil;
+	NSUInteger count = [_mainThreadContext countForFetchRequest:request error:&error];
+	if (count == NSNotFound) {
+		[self report:[NSString stringWithFormat:@"Could not count entities: %@", error]];
+	}
+	return count;
 }
 
 @end

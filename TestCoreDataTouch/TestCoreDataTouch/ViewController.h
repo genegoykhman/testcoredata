@@ -11,7 +11,11 @@
 @interface ViewController : UIViewController
 
 @property (assign) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UILabel *countEntities;
+@property (strong, nonatomic) DataController *dataController;
 
 - (void)report:(NSString *)info;
+- (IBAction)onInsert:(id)sender;
+- (IBAction)onDeleteAll:(id)sender;
 
 @end

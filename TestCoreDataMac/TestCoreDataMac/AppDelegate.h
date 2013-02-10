@@ -14,5 +14,9 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSTextView *textView;
 @property (strong, nonatomic) DataController *dataController;
+@property (strong, nonatomic) IBOutlet NSTextField *countEntities;
+- (IBAction)onInsert:(id)sender;
+- (IBAction)onDeleteAll:(id)sender;
+- (void)refreshEntityCount;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0E52EFB16C868190028D704 /* SimpleModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = B0E52EFA16C868190028D704 /* SimpleModel.xcdatamodel */; };
 		B0FB516316C76C8E004F11E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB516216C76C8E004F11E1 /* UIKit.framework */; };
 		B0FB516516C76C8E004F11E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB516416C76C8E004F11E1 /* Foundation.framework */; };
 		B0FB516716C76C8E004F11E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB516616C76C8E004F11E1 /* CoreGraphics.framework */; };
@@ -19,10 +20,10 @@
 		B0FB517C16C76C8F004F11E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB517B16C76C8F004F11E1 /* ViewController.m */; };
 		B0FB517F16C76C8F004F11E1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0FB517D16C76C8F004F11E1 /* ViewController.xib */; };
 		B0FB51C316C76EF9004F11E1 /* libTestCoreDataShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB51C216C76EF9004F11E1 /* libTestCoreDataShared.a */; };
-		B0FB51CB16C77529004F11E1 /* SimpleModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B0FB51CA16C77529004F11E1 /* SimpleModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0E52EFA16C868190028D704 /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = SimpleModel.xcdatamodel; path = ../../TestCoreDataShared/TestCoreDataShared/SimpleModel.xcdatamodeld/SimpleModel.xcdatamodel; sourceTree = "<group>"; };
 		B0FB515F16C76C8E004F11E1 /* TestCoreDataTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCoreDataTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FB516216C76C8E004F11E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0FB516416C76C8E004F11E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,7 +42,6 @@
 		B0FB517E16C76C8F004F11E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B0FB51C216C76EF9004F11E1 /* libTestCoreDataShared.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestCoreDataShared.a; path = "../TestCoreDataShared/build/Release-iphoneos/libTestCoreDataShared.a"; sourceTree = "<group>"; };
 		B0FB51C416C773EA004F11E1 /* TestCoreDataTouch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestCoreDataTouch.entitlements; sourceTree = "<group>"; };
-		B0FB51C916C77529004F11E1 /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B0FB51C416C773EA004F11E1 /* TestCoreDataTouch.entitlements */,
-				B0FB51CA16C77529004F11E1 /* SimpleModel.xcdatamodeld */,
+				B0E52EFA16C868190028D704 /* SimpleModel.xcdatamodel */,
 				B0FB517116C76C8E004F11E1 /* AppDelegate.h */,
 				B0FB517216C76C8E004F11E1 /* AppDelegate.m */,
 				B0FB517A16C76C8F004F11E1 /* ViewController.h */,
@@ -172,7 +172,6 @@
 				B0FB517716C76C8E004F11E1 /* Default@2x.png in Resources */,
 				B0FB517916C76C8F004F11E1 /* Default-568h@2x.png in Resources */,
 				B0FB517F16C76C8F004F11E1 /* ViewController.xib in Resources */,
-				B0FB51CB16C77529004F11E1 /* SimpleModel.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +185,7 @@
 				B0FB516F16C76C8E004F11E1 /* main.m in Sources */,
 				B0FB517316C76C8E004F11E1 /* AppDelegate.m in Sources */,
 				B0FB517C16C76C8F004F11E1 /* ViewController.m in Sources */,
+				B0E52EFB16C868190028D704 /* SimpleModel.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,19 +321,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B0FB51CA16C77529004F11E1 /* SimpleModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B0FB51C916C77529004F11E1 /* SimpleModel.xcdatamodel */,
-			);
-			currentVersion = B0FB51C916C77529004F11E1 /* SimpleModel.xcdatamodel */;
-			name = SimpleModel.xcdatamodeld;
-			path = /Users/gene/Dropbox/Documents/testcoredata/TestCoreDataMac/TestCoreDataMac/../../TestCoreDataShared/TestCoreDataShared/SimpleModel.xcdatamodeld;
-			sourceTree = "<absolute>";
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B0FB515716C76C8E004F11E1 /* Project object */;
 }

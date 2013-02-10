@@ -21,6 +21,9 @@
 	[self.window makeKeyAndVisible];
 	[self report:@"Welcome to TestCoreDataTouch"];
 	[self setDataController:[DataController alloc] initWithDelegate:self];
+	[[self viewController] setDataController:[self dataController]];
+	[_dataController loadPersistentStores];
+	[self refreshEntityCount];
 	return YES;
 }
 

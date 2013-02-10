@@ -23,6 +23,9 @@
 @property (nonatomic, readonly) id currentUbiquityToken;
 
 - (id)initWithDelegate:(id)delegate;
+- (NSUInteger)countEntities;
+- (void)deleteAllEntities;
+- (void)insertSimpleEntity;
 - (void)loadPersistentStores;
 - (void)nukeAndPave;
 

@@ -31,4 +31,19 @@
 	[_textView setText:[NSString stringWithFormat:@"%@\n%@", [_textView text], info]];
 }
 
+- (IBAction)onInsert:(id)sender
+{
+	[_dataController insertSimpleEntity];
+}
+
+- (IBAction)onDeleteAll:(id)insert
+{
+	[_dataController deleteAllEntities];
+}
+
+- (void)refreshEntityCount
+{
+	[_countEntities setText:[NSString stringWithFormat:@"%d", [_dataController countEntities]]];
+}
+
 @end

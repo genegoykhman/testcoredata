@@ -16,6 +16,7 @@
 	[self report:@"Welcome to TestCoreDataMac"];
 	[self setDataController:[[DataController alloc] initWithDelegate:self]];
 	[_dataController loadPersistentStores];
+	[self refreshEntityCount];
 }
 
 - (void)report:(NSString *)info
@@ -26,7 +27,21 @@
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
-    return NSTerminateNow;
+	return NSTerminateNow;
+}
+
+- (void)onInsert:(id)sender
+{
+	[_dataController insertSimpleEntity];
+}
+
+- (void)onDeleteAll:(id)insert
+{
+	[_dataController deleteAllEntities];
+}
+
+- (void)refreshEntityCount
+{
 }
 
 @end
