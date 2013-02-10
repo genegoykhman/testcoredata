@@ -7,16 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DataController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (assign) IBOutlet NSTextView *textView;
-
-- (IBAction)saveAction:(id)sender;
+@property (strong, nonatomic) DataController *dataController;
 
 @end

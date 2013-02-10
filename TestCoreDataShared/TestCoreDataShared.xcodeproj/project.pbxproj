@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0E52EF416C857C50028D704 /* SimpleEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E52EF216C857C50028D704 /* SimpleEntity.h */; };
+		B0E52EF516C857C50028D704 /* SimpleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E52EF316C857C50028D704 /* SimpleEntity.m */; };
+		B0E52EF616C857C50028D704 /* SimpleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E52EF316C857C50028D704 /* SimpleEntity.m */; };
 		B0FB519216C76CFD004F11E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB519116C76CFD004F11E1 /* Foundation.framework */; };
 		B0FB519716C76CFD004F11E1 /* TestCoreDataShared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0FB519616C76CFD004F11E1 /* TestCoreDataShared.h */; };
 		B0FB519916C76CFD004F11E1 /* TestCoreDataShared.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB519816C76CFD004F11E1 /* TestCoreDataShared.m */; };
 		B0FB51A116C76D22004F11E1 /* SimpleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0FB519F16C76D22004F11E1 /* SimpleModel.xcdatamodeld */; };
-		B0FB51A416C76DD9004F11E1 /* SimpleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB51A316C76DD9004F11E1 /* SimpleEntity.m */; };
 		B0FB51AB16C76E53004F11E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB51AA16C76E53004F11E1 /* Cocoa.framework */; };
 		B0FB51B516C76E53004F11E1 /* TestCoreDataSharedMac.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB51B416C76E53004F11E1 /* TestCoreDataSharedMac.m */; };
 		B0FB51BB16C76E9B004F11E1 /* DataController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FB51B916C76E9B004F11E1 /* DataController.h */; };
 		B0FB51BC16C76E9B004F11E1 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB51BA16C76E9B004F11E1 /* DataController.m */; };
 		B0FB51BD16C76E9B004F11E1 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB51BA16C76E9B004F11E1 /* DataController.m */; };
-		B0FB51BE16C76ED0004F11E1 /* SimpleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB51A316C76DD9004F11E1 /* SimpleEntity.m */; };
 		B0FB51BF16C76ED4004F11E1 /* SimpleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0FB519F16C76D22004F11E1 /* SimpleModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -35,14 +36,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B0E52EF216C857C50028D704 /* SimpleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleEntity.h; sourceTree = "<group>"; };
+		B0E52EF316C857C50028D704 /* SimpleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleEntity.m; sourceTree = "<group>"; };
 		B0FB518E16C76CFD004F11E1 /* libTestCoreDataShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestCoreDataShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FB519116C76CFD004F11E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0FB519516C76CFD004F11E1 /* TestCoreDataShared-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCoreDataShared-Prefix.pch"; sourceTree = "<group>"; };
 		B0FB519616C76CFD004F11E1 /* TestCoreDataShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCoreDataShared.h; sourceTree = "<group>"; };
 		B0FB519816C76CFD004F11E1 /* TestCoreDataShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCoreDataShared.m; sourceTree = "<group>"; };
 		B0FB51A016C76D22004F11E1 /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleModel.xcdatamodel; sourceTree = "<group>"; };
-		B0FB51A216C76DD9004F11E1 /* SimpleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleEntity.h; path = ../SimpleEntity.h; sourceTree = "<group>"; };
-		B0FB51A316C76DD9004F11E1 /* SimpleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleEntity.m; path = ../SimpleEntity.m; sourceTree = "<group>"; };
 		B0FB51A916C76E53004F11E1 /* libTestCoreDataSharedMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestCoreDataSharedMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FB51AA16C76E53004F11E1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		B0FB51AD16C76E53004F11E1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -109,8 +110,8 @@
 			children = (
 				B0FB51B916C76E9B004F11E1 /* DataController.h */,
 				B0FB51BA16C76E9B004F11E1 /* DataController.m */,
-				B0FB51A216C76DD9004F11E1 /* SimpleEntity.h */,
-				B0FB51A316C76DD9004F11E1 /* SimpleEntity.m */,
+				B0E52EF216C857C50028D704 /* SimpleEntity.h */,
+				B0E52EF316C857C50028D704 /* SimpleEntity.m */,
 				B0FB519616C76CFD004F11E1 /* TestCoreDataShared.h */,
 				B0FB519816C76CFD004F11E1 /* TestCoreDataShared.m */,
 				B0FB519F16C76D22004F11E1 /* SimpleModel.xcdatamodeld */,
@@ -163,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0FB51BB16C76E9B004F11E1 /* DataController.h in Headers */,
+				B0E52EF416C857C50028D704 /* SimpleEntity.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,8 +239,8 @@
 			files = (
 				B0FB519916C76CFD004F11E1 /* TestCoreDataShared.m in Sources */,
 				B0FB51A116C76D22004F11E1 /* SimpleModel.xcdatamodeld in Sources */,
-				B0FB51A416C76DD9004F11E1 /* SimpleEntity.m in Sources */,
 				B0FB51BC16C76E9B004F11E1 /* DataController.m in Sources */,
+				B0E52EF516C857C50028D704 /* SimpleEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +250,8 @@
 			files = (
 				B0FB51B516C76E53004F11E1 /* TestCoreDataSharedMac.m in Sources */,
 				B0FB51BD16C76E9B004F11E1 /* DataController.m in Sources */,
-				B0FB51BE16C76ED0004F11E1 /* SimpleEntity.m in Sources */,
 				B0FB51BF16C76ED4004F11E1 /* SimpleModel.xcdatamodeld in Sources */,
+				B0E52EF616C857C50028D704 /* SimpleEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +391,7 @@
 				B0FB519E16C76CFD004F11E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0FB51B616C76E53004F11E1 /* Build configuration list for PBXNativeTarget "TestCoreDataSharedMac" */ = {
 			isa = XCConfigurationList;
@@ -397,6 +400,7 @@
 				B0FB51B816C76E53004F11E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

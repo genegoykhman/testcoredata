@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataController.h"
 
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) DataController *dataController;
 
 - (void)report:(NSString *)info;
 
