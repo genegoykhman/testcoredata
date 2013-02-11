@@ -111,13 +111,15 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 
 - (void)oniCloudUpdate:(NSNotification *)note
 {
-	[self performSelectorOnMainThread:@selector(mergeiCloudChangeNotification)];
+	[self performSelectorOnMainThread:@selector(mergeiCloudChangeNotification:)
+								  withObject:note
+							  waitUntilDone:NO];
 }
 
-- (void)mergeiCloudChangeNotification:(NSNotification *)note
+- (void)mergeiCloudChangeNotification:(id)note
 {
 	[self report:@"Received update from iCloud"];
-	[_mainThreadContext mergeChangesFromContextDidSaveNotification:note];
+	[_mainThreadContext mergeChangesFromContextDidSaveNotification:(NSNotification *)note];
 	[_delegate performSelector:@selector(refreshEntityCount)];
 }
 
