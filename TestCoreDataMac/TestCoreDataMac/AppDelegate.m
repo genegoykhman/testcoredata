@@ -16,13 +16,15 @@
 	[self report:@"Welcome to TestCoreDataMac"];
 	[self setDataController:[[DataController alloc] initWithDelegate:self]];
 	[_dataController loadPersistentStores];
-	[self refreshEntityCount];
+	[self refreshEntityCount:nil];
 }
 
 - (void)report:(NSString *)info
 {
 	NSTextStorage *storage = [_textView textStorage];
 	[_textView setString:[NSString stringWithFormat:@"%@\n%@", [storage string], info]];
+	NSRange bottom = NSMakeRange([[storage string] length], 0);
+	[_textView scrollRangeToVisible:bottom];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
@@ -35,13 +37,19 @@
 	[_dataController insertSimpleEntity];
 }
 
-- (void)onDeleteAll:(id)insert
+- (void)onDeleteAll:(id)sender
 {
 	[_dataController deleteAllEntities];
 }
 
-- (void)refreshEntityCount
+- (void)onNukeAndPave:(id)sender
 {
+	[_dataController nukeAndPave];
+}
+
+- (void)refreshEntityCount:(id)sender
+{
+	[_countEntities setStringValue:[NSString stringWithFormat:@"%d", (int)[_dataController countEntities]]];
 }
 
 @end

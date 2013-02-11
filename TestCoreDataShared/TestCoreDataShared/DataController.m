@@ -228,6 +228,7 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 - (void)deleteAllEntities
 {
 	NSError *error = nil;
+	int deleted = 0;
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:[NSEntityDescription entityForName:@"SimpleEntity" inManagedObjectContext:_mainThreadContext]];
 	[request setIncludesSubentities:NO];
@@ -238,12 +239,15 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 	}
 	for (NSManagedObject *obj in results) {
 		[_mainThreadContext deleteObject:obj];
+		deleted++;
 	}
 	
 	// Save
 	
 	if (![_mainThreadContext save:&error])
 		[self report:[NSString stringWithFormat:@"Could not delete entities %@", error]];
+	else
+		[self report:[NSString stringWithFormat:@"Deleted %d entities", deleted]];
 	[_delegate performSelector:@selector(refreshEntityCount:)];
 }
 

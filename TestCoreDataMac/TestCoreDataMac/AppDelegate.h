@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet NSTextField *countEntities;
 - (IBAction)onInsert:(id)sender;
 - (IBAction)onDeleteAll:(id)sender;
-- (void)refreshEntityCount;
+- (IBAction)onNukeAndPave:(id)sender;
+- (void)refreshEntityCount:(id)sender;
 
 @end
