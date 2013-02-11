@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A5688816C886E300C00B31 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A5688716C886E300C00B31 /* CoreData.framework */; };
 		B0E52EFB16C868190028D704 /* SimpleModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = B0E52EFA16C868190028D704 /* SimpleModel.xcdatamodel */; };
 		B0FB516316C76C8E004F11E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB516216C76C8E004F11E1 /* UIKit.framework */; };
 		B0FB516516C76C8E004F11E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FB516416C76C8E004F11E1 /* Foundation.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0A5688716C886E300C00B31 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B0E52EFA16C868190028D704 /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = SimpleModel.xcdatamodel; path = ../../TestCoreDataShared/TestCoreDataShared/SimpleModel.xcdatamodeld/SimpleModel.xcdatamodel; sourceTree = "<group>"; };
 		B0FB515F16C76C8E004F11E1 /* TestCoreDataTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCoreDataTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FB516216C76C8E004F11E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A5688816C886E300C00B31 /* CoreData.framework in Frameworks */,
 				B0FB516316C76C8E004F11E1 /* UIKit.framework in Frameworks */,
 				B0FB516516C76C8E004F11E1 /* Foundation.framework in Frameworks */,
 				B0FB516716C76C8E004F11E1 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +65,7 @@
 		B0FB515616C76C8E004F11E1 = {
 			isa = PBXGroup;
 			children = (
+				B0A5688716C886E300C00B31 /* CoreData.framework */,
 				B0FB51C216C76EF9004F11E1 /* libTestCoreDataShared.a */,
 				B0FB516816C76C8E004F11E1 /* TestCoreDataTouch */,
 				B0FB516116C76C8E004F11E1 /* Frameworks */,

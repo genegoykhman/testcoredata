@@ -20,7 +20,7 @@
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];
 	[self report:@"Welcome to TestCoreDataTouch"];
-	[self setDataController:[DataController alloc] initWithDelegate:self];
+	[self setDataController:[[DataController alloc] initWithDelegate:self]];
 	[[self viewController] setDataController:[self dataController]];
 	[_dataController loadPersistentStores];
 	[self refreshEntityCount];
@@ -57,6 +57,11 @@
 - (void)report:(NSString *)info
 {
 	[_viewController report:info];
+}
+
+- (void)refreshEntityCount
+{
+	[_viewController refreshEntityCount];
 }
 
 @end

@@ -16,7 +16,7 @@
 	[self report:@"Welcome to TestCoreDataMac"];
 	[self setDataController:[[DataController alloc] initWithDelegate:self]];
 	[_dataController loadPersistentStores];
-	[self refreshEntityCount:nil];
+	[self refreshEntityCount];
 }
 
 - (void)report:(NSString *)info
@@ -47,7 +47,7 @@
 	[_dataController nukeAndPave];
 }
 
-- (void)refreshEntityCount:(id)sender
+- (void)refreshEntityCount
 {
 	[_countEntities setStringValue:[NSString stringWithFormat:@"%d", (int)[_dataController countEntities]]];
 }

@@ -42,7 +42,7 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 	// Set ourselves up to observe iCloud changes
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
-														  selector:@selector(mergeiCloudChangeNotification)
+														  selector:@selector(oniCloudUpdate:)
 																name:NSPersistentStoreDidImportUbiquitousContentChangesNotification
 															 object:_psc];
 	
@@ -109,11 +109,16 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 	}
 }
 
+- (void)oniCloudUpdate:(NSNotification *)note
+{
+	[self performSelectorOnMainThread:@selector(mergeiCloudChangeNotification)];
+}
+
 - (void)mergeiCloudChangeNotification:(NSNotification *)note
 {
 	[self report:@"Received update from iCloud"];
 	[_mainThreadContext mergeChangesFromContextDidSaveNotification:note];
-	[_delegate performSelector:@selector(refreshEntityCount:)];
+	[_delegate performSelector:@selector(refreshEntityCount)];
 }
 
 - (void)nukeAndPave {
@@ -221,7 +226,7 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 		[self report:[NSString stringWithFormat:@"Could not save entity: %@", error]];
 	else {
 		[self report:[NSString stringWithFormat:@"Entity successfully added"]];
-		[_delegate performSelector:@selector(refreshEntityCount:)];
+		[_delegate performSelector:@selector(refreshEntityCount)];
 	}
 }
 
@@ -248,7 +253,7 @@ NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
 		[self report:[NSString stringWithFormat:@"Could not delete entities %@", error]];
 	else
 		[self report:[NSString stringWithFormat:@"Deleted %d entities", deleted]];
-	[_delegate performSelector:@selector(refreshEntityCount:)];
+	[_delegate performSelector:@selector(refreshEntityCount)];
 }
 
 - (NSUInteger)countEntities

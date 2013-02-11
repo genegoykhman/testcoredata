@@ -18,6 +18,6 @@
 - (IBAction)onInsert:(id)sender;
 - (IBAction)onDeleteAll:(id)sender;
 - (IBAction)onNukeAndPave:(id)sender;
-- (void)refreshEntityCount:(id)sender;
+- (void)refreshEntityCount;
 
 @end

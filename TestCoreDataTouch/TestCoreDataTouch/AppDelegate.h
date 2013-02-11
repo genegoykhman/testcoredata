@@ -17,6 +17,6 @@
 @property (strong, nonatomic) ViewController *viewController;
 @property (strong, nonatomic) DataController *dataController;
 - (void)report:(NSString *)info;
-- (void)refreshEntityCount:(id)sender;
+- (void)refreshEntityCount;
 
 @end

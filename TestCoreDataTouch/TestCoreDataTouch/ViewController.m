@@ -36,7 +36,7 @@
 	[_dataController insertSimpleEntity];
 }
 
-- (IBAction)onDeleteAll:(id)insert
+- (IBAction)onDeleteAll:(id)sender
 {
 	[_dataController deleteAllEntities];
 }

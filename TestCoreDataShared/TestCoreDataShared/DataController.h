@@ -28,5 +28,7 @@
 - (void)insertSimpleEntity;
 - (void)loadPersistentStores;
 - (void)nukeAndPave;
+- (void)oniCloudUpdate:(NSNotification *)note
+- (void)mergeiCloudChangeNotification:(NSNotification *)note;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataController.h"
 
 @interface ViewController : UIViewController
 
@@ -17,5 +18,6 @@
 - (void)report:(NSString *)info;
 - (IBAction)onInsert:(id)sender;
 - (IBAction)onDeleteAll:(id)sender;
+- (void)refreshEntityCount;
 
 @end
